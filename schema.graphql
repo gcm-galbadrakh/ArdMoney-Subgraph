@@ -95,6 +95,10 @@ type Pair @entity {
   mints: [Mint!]! @derivedFrom(field: "pair")
   burns: [Burn!]! @derivedFrom(field: "pair")
   swaps: [Swap!]! @derivedFrom(field: "pair")
+
+  # Created at
+  timestamp: BigInt!
+  block: BigInt!
 }
 
 type User @entity {
